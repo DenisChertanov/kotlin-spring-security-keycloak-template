@@ -1,0 +1,27 @@
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+
+# Idea
+**/.idea/**
+*.iml
+
+# Maven
+**/target/**
+**/.mvn/**
+
+# Gradle
+**/gradle/**
+
+# Mac OS
+**/.DS_Store
+
+# Docker
+docker/data
+docker/full/data
