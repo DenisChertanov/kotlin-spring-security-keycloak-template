@@ -1,1 +1,5 @@
-
+keycloak:
+  auth-server-url: http://192.168.0.191:8484/auth
+  realm: test_realm
+  resource: test-client
+  public-client: true
