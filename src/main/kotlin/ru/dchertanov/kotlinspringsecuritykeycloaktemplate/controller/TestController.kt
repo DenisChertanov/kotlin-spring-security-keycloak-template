@@ -23,20 +23,28 @@ class TestController {
         return ResponseEntity.ok("ANONYMOUS")
     }
 
-    @GetMapping("/user")
-    @PreAuthorize("hasRole('user')")
-    fun userAccess(): ResponseEntity<String> {
-        logger.info("User request was received!")
+    @GetMapping("/self_employed")
+    @PreAuthorize("hasRole('self_employed')")
+    fun selfEmployedAccess(): ResponseEntity<String> {
+        logger.info("self_employed request was received!")
 
-        return ResponseEntity.ok("USER")
+        return ResponseEntity.ok("self_employed")
     }
 
-    @GetMapping("/admin")
-    @PreAuthorize("hasRole('admin')")
-    fun adminAccess(): ResponseEntity<String> {
-        logger.info("Admin request was received!")
+    @GetMapping("/not_confirmed_self_employed")
+    @PreAuthorize("hasRole('not_confirmed_self_employed')")
+    fun notConfirmedSelfEmployedAccess(): ResponseEntity<String> {
+        logger.info("not_confirmed_self_employed request was received!")
 
-        return ResponseEntity.ok("ADMIN")
+        return ResponseEntity.ok("not_confirmed_self_employed")
+    }
+
+    @GetMapping("/employee")
+    @PreAuthorize("hasRole('employee')")
+    fun employeeAccess(): ResponseEntity<String> {
+        logger.info("employee request was received!")
+
+        return ResponseEntity.ok("employee")
     }
 
     @GetMapping("/me")
